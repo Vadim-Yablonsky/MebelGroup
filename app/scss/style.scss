@@ -205,3 +205,139 @@
 }
 .thsee {
 }
+
+//start slider
+.slider {
+   margin-top: 100px;
+
+   &__inner {
+   }
+
+   &__item {
+      max-width: 1760px;
+      width: 100%;
+      position: relative;
+   }
+
+   &__item-img {
+      min-height: 787px;
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-size: cover;
+      display: block;
+   }
+
+   &__item-info {
+      width: 535px;  // 480px
+      position: absolute;
+      top: 90px;
+      left: 110px;
+   }
+
+   &__subtitle {
+      color: $white;
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 27px;
+      // text-shadow: 1px 1px 3px black;
+   }
+
+   &__title {
+      color: $white;
+      font-size: 60px;
+      line-height: 64px;
+      margin-bottom: 32px;
+      // text-shadow: 1px 1px 4px black;
+   }
+
+   &__btn {
+      display: inline-block;
+      @include f800;
+      font-size: 14px;
+      line-height: 1.215;
+      color: $text;
+      margin-left: 16px;
+      position: relative;
+         &::before{
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: $text;
+            transition: all 0.2s;
+         }
+         &:hover::before{
+            height: 2px;
+   }
+}
+
+   &__item-dots {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 110px;
+      align-items: center;
+      padding-left: 12.5vw;
+      border-top: 1px solid hsla(0, 0%, 100%, 0.3);
+      display: flex;
+   }
+
+   &__item-dots--left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      max-width: 160px;
+      width: 100%;
+      height: 110px;
+      border-right: 1px solid hsla(0, 0%, 100%, 0.3);
+   }
+
+   &__item-dots--total {
+      position: absolute;
+      bottom: 30px;
+      left: 71px;
+      color: $white;
+      // text-shadow: 1px 1px 3px grey;
+   }
+}
+.img {
+}
+
+.slick-dots{
+   position: absolute;
+   bottom: 68px;
+   left: 65px;
+
+   & li{
+      display: none;
+   }
+
+   & .slick-active{
+      display: block;
+      position: relative;
+   }
+
+   & .slick-active::before{
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: $white;
+      // box-shadow: 1px 1px 3px grey;;
+   }
+
+   & li button{
+      border: none;
+      background-color: transparent;
+      color: $white;
+      font-size: 16px;
+      // text-shadow: 1px 1px 3px grey;;
+   }
+}
+
+//end slider
