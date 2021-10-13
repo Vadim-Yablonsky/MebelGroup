@@ -565,11 +565,25 @@
          background-color: $underline;
       }
    }
+   &__load-more{
+      font-size: 14px;
+      line-height: 1.715;
+      @include f600;
+      max-width: 1440px;
+      width: 100%;
+      padding: 15px 0;
+      text-align: center;
+      margin: 0 auto;
+      align-items: center;
+      position: relative;
+      transition: all 0.3s;
+      cursor: pointer;
+      &::after{
+         content: "...";
+      }
+   }
 }
-.container {
-}
-.title {
-}
+
 .button-buy {
    display: flex;
    justify-content: space-between;
@@ -587,8 +601,12 @@
       background: linear-gradient(to top,$header-top-bg, #cfd1cd);
    }
 }
-.icon-shopping-cart {
+
+// Количество карточек до нажатия кнопки Load more
+#boxes .box:nth-child(n + 4){
+   display: none;
 }
+
 
 @keyframes animate{
    0%{

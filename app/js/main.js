@@ -30,5 +30,13 @@ $(function () {
       autoplay: true
    });
 
+   // Load more
+   $('#load-more').click(function (){
+      $('#boxes .box:hidden').slice(0, 3).slideDown()
+      if (($('#boxes .box:hidden')).length == 0) {
+         $('#load-more').fadeOut('slow')
+      }
+   });
+
 });
 
